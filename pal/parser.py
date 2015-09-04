@@ -1,5 +1,9 @@
 import datetime
 
+def file(fp):
+    for line in fp:
+        yield from entry(line)
+
 def entry(line):
     'Read a pal calendar entry'
     datespec, _, description = line.partition(' ')
